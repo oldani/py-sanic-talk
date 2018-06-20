@@ -1,2 +1,2 @@
-# py-sanic-talk
+# pydo-sanic-talk
 PythonDominicana Sanic lightning talk.
