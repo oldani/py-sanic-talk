@@ -24,8 +24,11 @@ async def age(request, age: int) -> json:
     return json({'hello': age})
 
 
-async def phrase(request, phrase: str) -> html:
-    return html(f'<p>Hey say something: <strong>{phrase}</strong></p>')
+async def phrase(request) -> html:
+    json_body = request.json
+    # query_strings = request.args
+    # form = request.form
+    return html(f'<p>Hey say something: <strong>{json_body.phrase}</strong></p>')
 
 
 app.add_route(phrase, '/phrase', methods=['POST'])
